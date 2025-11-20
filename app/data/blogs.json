@@ -1,0 +1,16 @@
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "React JS 18",
+    "body": "React is javascript library to create SPA",
+    "blogger": "Ram Kumar"
+  },
+  {
+    "userId": 3,
+    "id": 3,
+    "title": "Javascript",
+    "body": "Javacsript is a scripting language used in client side",
+    "blogger": "Laxman Kumar"
+  }
+]
