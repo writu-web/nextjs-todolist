@@ -11,6 +11,7 @@ export default async function Blog() {
   return (
     <div className="container">
            <AddBlog/>
+            {console.log(blogs)}
            <h1 className="font-bold">List of blogs</h1>
             {blogs.map((blog: { id: number; title: string; body: string, blogger: string }) => (
                 <Link href={`/blog/${blog.id}`} key={blog.id} className="bg-white shadow-2xs p-2">
