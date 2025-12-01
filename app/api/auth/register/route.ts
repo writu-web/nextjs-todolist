@@ -8,8 +8,29 @@ import { prisma } from "../../../../lib/prisma";
 export async function POST(request: Request) {
   try {
     const { name, email, password } = await request.json();
+    console.log("Register API received:", {
+      name,
+      email,
+      password: password ? "***" : undefined,
+    });
+
     if (!name || !email || !password || password.length < 6) {
-      return new Response(JSON.stringify({ message: "Invalid input" }), {
+      console.log("Validation failed:", {
+        name: !name,
+        email: !email,
+        password: !password,
+        length: password?.length,
+      });
+      const details = {
+        message: "Invalid input",
+        missing: {
+          name: !name,
+          email: !email,
+          password: !password || password.length < 6,
+        },
+      };
+      console.log("Detailed error:", details);
+      return new Response(JSON.stringify(details), {
         status: 422,
       });
     }
@@ -36,23 +57,26 @@ export async function POST(request: Request) {
     return response;
   } catch (error) {
     console.error("Register API Error:", error);
-    
+
     // Handle specific Prisma errors
     if (error instanceof Error) {
       if (error.message.includes("Unique constraint failed")) {
-        return new Response(JSON.stringify({ message: "Email already registered" }), {
-          status: 409,
-        });
+        return new Response(
+          JSON.stringify({ message: "Email already registered" }),
+          {
+            status: 409,
+          }
+        );
       }
       console.error("Error details:", error.message);
       console.error("Error stack:", error.stack);
     }
-    
+
     return new Response(
-      JSON.stringify({ 
+      JSON.stringify({
         message: "Internal Server Error",
-        error: error instanceof Error ? error.message : String(error)
-      }), 
+        error: error instanceof Error ? error.message : String(error),
+      }),
       {
         status: 500,
       }
