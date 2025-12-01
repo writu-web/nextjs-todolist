@@ -1,6 +1,6 @@
 "use server";
 import { revalidatePath } from "next/cache";
-import { getBlogs, saveBlogs } from "../lib/blogs/blogs";
+import { getBlogs, saveBlogs } from "../../lib/blogs/blogs";
 
 export async function editBlog(formData: FormData): Promise<void> {
   console.log("Editing blog with formData:", formData);

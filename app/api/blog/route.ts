@@ -1,4 +1,4 @@
-import { getBlogs, saveBlogs } from "@/app/lib/blogs/blogs";
+import { getBlogs, saveBlogs } from "@/lib/blogs/blogs";
 
 const blogs = await getBlogs();
 

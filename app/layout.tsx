@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Modak } from "next/font/google";
 import "./globals.css";
-import header from "./components/layout/headerBar";
-import HeaderBar from "./components/layout/headerBar";
+import HeaderBar from "../components/layout/headerBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,8 +20,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <HeaderBar/>
         {children}
+        {modal}
       </body>
     </html>
   );

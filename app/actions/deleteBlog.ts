@@ -1,6 +1,6 @@
 "use server";
 import { revalidatePath } from "next/cache";
-import { getBlogs, saveBlogs } from "../lib/blogs/blogs";
+import { getBlogs, saveBlogs } from "../../lib/blogs/blogs";
 import { redirect } from "next/navigation";
 
 export async function deleteBlog(formData: FormData): Promise<void> {

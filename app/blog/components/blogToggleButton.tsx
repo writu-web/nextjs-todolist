@@ -1,7 +1,7 @@
 'use client';
 import { useState } from "react";
 import BlogEdit from "./blogEdit";
-import DeleteBlog from "./deleteButton";
+import DeleteBlog from "../../../components/deleteButton";
 
 export default function BlogToggleButton({ selectedBlog: { id, title, body, blogger } }: { selectedBlog: { id: string; title: string; body: string; blogger: string } }) {
     const [showEdit, setShowEdit] = useState(false);

@@ -1,0 +1,44 @@
+[
+  {
+    "userId": "d03e48b4-252d-472f-968f-3e9938ee6b76",
+    "id": "d03e48b4-252d-472f-968f-3e9938ee6b76",
+    "title": "Next js 15",
+    "body": "Next js is a frame work which is using reactjs 19 ",
+    "blogger": "Sita Rani"
+  },
+  {
+    "userId": "aef7e172-b1e4-400f-8e22-b17ff6774b86",
+    "id": "aef7e172-b1e4-400f-8e22-b17ff6774b86",
+    "title": "React js",
+    "body": "React is one of the most populer JS library which is used to create Single Page Application",
+    "blogger": "Ram Kumar"
+  },
+  {
+    "userId": "2ef55474-56e8-4eb9-8df4-5d08953da3e2",
+    "id": "2ef55474-56e8-4eb9-8df4-5d08953da3e2",
+    "title": "ES6",
+    "body": "ES6 advance version of javascript",
+    "blogger": "Laxman Rao"
+  },
+  {
+    "userId": "7b9b27bc-8ebb-4a87-97e1-ac60116792f0",
+    "id": "7b9b27bc-8ebb-4a87-97e1-ac60116792f0",
+    "title": "HTML ",
+    "body": "Hyper text markup language",
+    "blogger": "Dasharath Raj"
+  },
+  {
+    "userId": "3955fc7e-2b7f-45a3-821e-8b718e1276b6",
+    "id": "3955fc7e-2b7f-45a3-821e-8b718e1276b6",
+    "title": "Typescript",
+    "body": "Typescript is advance type specific JS",
+    "blogger": "Kousalya Devi"
+  },
+  {
+    "userId": "3b12c3bd-c936-49f7-892b-8add1f32f31a",
+    "id": "3b12c3bd-c936-49f7-892b-8add1f32f31a",
+    "title": "testibg",
+    "body": "testing blog post",
+    "blogger": "tester"
+  }
+]

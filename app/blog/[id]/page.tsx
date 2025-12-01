@@ -1,6 +1,6 @@
-import { getBlogs } from "@/app/lib/blogs/blogs";
-import BlogHeader from "../../components/blog/blogHeader";
-import BlogToggleButton from "../../components/blog/blogToggleButton";
+import { getBlogs } from "@/lib/blogs/blogs";
+import BlogHeader from "../components/blogHeader";
+import BlogToggleButton from "../components/blogToggleButton";
 
 export default async function BlogDetails({ params }: { params: Promise<{ id: string }> }) {
     const blogs = await getBlogs();

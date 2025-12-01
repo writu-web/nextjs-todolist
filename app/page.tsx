@@ -1,5 +1,4 @@
-import Image from "next/image";
-import BannerArea from "./components/layout/banner";
+import BannerArea from "../components/layout/banner";
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 import { editBlog } from "@/app/actions/editBlog";
-import DiscardButton from "./discardButton";
+import DiscardButton from "../../../components/discardButton";
 
 export default function BlogEdit( {id,title,body,blogger}: {id:string, title:string,body:string,blogger:string}  ) {
        console.log("editButton props:", { id, title, body, blogger });
