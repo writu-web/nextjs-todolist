@@ -14,8 +14,8 @@ export async function verifyPassword(password: string, hash: string) {
 }
 
 // Sign JWT token
-export function createToken(userId: string) {
-  return jwt.sign({ userId }, JWT_SECRET, { expiresIn: "7d" });
+export function createToken(userId: number | string) {
+  return jwt.sign({ userId: String(userId) }, JWT_SECRET, { expiresIn: "7d" });
 }
 
 // Save token in HttpOnly cookie
@@ -24,7 +24,7 @@ export async function saveAuthCookie(token: string) {
 
   cookieStore.set("token", token, {
     httpOnly: true,
-    secure: true,
+    secure: process.env.NODE_ENV === "production",
     maxAge: 60 * 60 * 24 * 7,
     path: "/",
   });

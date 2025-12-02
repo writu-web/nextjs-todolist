@@ -8,6 +8,10 @@ import {
 export async function POST(request: Request) {
   try {
     const { email, password } = await request.json();
+    console.log("Login API received:", {
+      email,
+      password: password ? "***" : undefined,
+    });
     if (!email || !password) {
       return new Response(JSON.stringify({ message: "Invalid input" }), {
         status: 422,
@@ -36,6 +40,11 @@ export async function POST(request: Request) {
     saveAuthCookie(token);
     return response;
   } catch (error) {
+    console.error("Login API Error:", error);
+    if (error instanceof Error) {
+      console.error("Error message:", error.message);
+      console.error("Error stack:", error.stack);
+    }
     return new Response(JSON.stringify({ message: "Internal Server Error" }), {
       status: 500,
     });
